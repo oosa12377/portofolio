@@ -1,405 +1,63 @@
+/* src/App.css */
+
+/* 1. استيراد الخطوط التي تريدها */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-html {
-  background-color: rgb(10, 10, 10);
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 1px;
-}
-.Home {
-  max-width: 1540px;
-  width: 100%;
-  min-height: 100vh;
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-}
-p {
-  color: #c7c7c7;
-  font-size: 18px;
-}
-nav {
-  max-width: 1700px;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  background-color: rgb(10, 10, 10);
-  justify-content: space-between;
-  align-items: center;
-  color: rgb(199, 199, 199);
-  margin-bottom: 2rem;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-}
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap");
 
-nav ul li a {
-  color: rgb(199, 199, 199);
-  text-decoration: unset;
-  transition-duration: 0.03s;
-}
-nav ul li a:hover {
-  font-size: 22px;
-}
+/* 2. تحديد الاستايل الأساسي لجسم الصفحة (الهوية البصرية) */
 body {
-  padding-top: 70px;
-}
-.header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 50px;
-  align-content: center;
-  margin-bottom: 50px;
-}
-.title {
-  display: flex;
-  flex-direction: column;
-  width: 544px;
-  height: 360px;
-}
-.title h1 {
-  font-size: 96px;
-  margin-bottom: -10px;
-}
-.title p {
-  font-size: 18px;
-}
+  /* هذا هو المكان الصحيح لوضع لون الخلفية الداكن */
+  background-color: #121212;
 
-.btn {
-  border-radius: 4px;
-  background-color: rgb(211, 233, 122);
-  border: none;
-  color: #fff;
-  text-align: center;
-  font-size: 22px;
-  width: 220px;
-  height: 54px;
-  transition: all 0.5s;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-}
+  /* اللون الافتراضي للنصوص في الموقع كله */
+  color: #f8f9fa; /* لون أبيض فاتح من Bootstrap */
 
-.btn:after {
-  content: "»";
-  position: absolute;
-  opacity: 0;
-  top: 14px;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.btn:hover {
-  padding-right: 24px;
-  padding-left: 8px;
-}
-
-.btn:hover:after {
-  opacity: 1;
-  right: 10px;
-}
-img {
-  text-align: center;
-  width: 500px;
-  height: 600px;
-  border-radius: 10px;
-}
-.btn-icons {
-  display: flex;
-  margin: 10px;
-  align-items: center;
-  gap: 10px;
-}
-hr {
-  border: 1px solid #484848;
-}
-.sec-title {
-  margin-top: 20px;
-}
-.sec-title h1 {
-  font-size: 76px;
-  margin-bottom: -20px;
-}
-.projects {
-  max-width: 1540px;
-  color: white;
-}
-.project {
-  display: flex;
-  height: 600px;
-  justify-content: space-around;
-  margin-top: 20px;
-  gap: 30px;
-  max-width: 1340px;
-  align-content: center;
-}
-p {
-  font-size: 14px;
+  /* الخط الافتراضي للنصوص العادية */
   font-family: "Rubik", sans-serif;
 }
-.description {
-  max-width: 50%;
-  margin-right: 10px;
+p {
+  /* لون أفتح وأوضح من الرمادي الباهت الافتراضي */
+  color: #e9ecef; /* هذا لون أبيض مائل للرمادي فاتح جداً */
+
+  /* حجم أكبر قليلاً من الافتراضي لسهولة القراءة */
+  font-size: 1.1rem; /* 1rem هو الحجم الافتراضي، نحن نكبره 10% */
+
+  /* مسافة أكبر بين السطور، تجعل القراءة مريحة جداً للعين */
+  line-height: 1.7;
 }
 
-.description .info {
-  display: flex;
-  justify-content: space-between;
+/* تعديل خاص لكلاس .text-muted الذي يستخدمه Bootstrap 
+  لجعله أوضح على الخلفية الداكنة 
+*/
+.text-muted {
+  color: #adb5bd !important; /* لون رمادي أفتح بشكل ملحوظ */
 }
-.image_project {
-  width: 600px;
-  height: 600px;
-}
-.image_project img {
-  margin: 20px;
-  width: 500px;
-  height: 400px;
-}
-.project_links {
-  display: flex;
-  gap: 15px;
-}
-.project_links a {
-  color: rgb(211, 233, 122);
-  font-size: 26px;
-}
-.about-home {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  height: 300px;
-  margin-bottom: 30px;
-}
-.about-home-title {
-  width: 50%;
-  margin: 30px;
-}
-.about-home-title h1 {
-  font-size: 65px;
-  font-weight: 400;
-}
-.about-home-details {
-  max-width: 50%;
-}
-.about-home-details h3 {
-  font-family: "Manrope", sans-serif;
-}
-.about-home-details span {
-  color: #d3e97a;
-  font-size: 16px;
-  cursor: pointer;
-}
-.connect {
-  display: flex;
-  justify-content: space-between;
-}
-.connect .connect-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-  margin: 30px;
-}
-.connect .connect-title p a {
-  margin-left: 2px;
-  color: #c7c7c7;
-}
-.connect-form {
-  margin-right: 50px;
-}
-.connect-form form {
-  display: flex;
-  flex-direction: column;
-}
-.connect-form form input {
-  background-color: #343434;
-  border: none;
-  width: 343px;
-  height: 46px;
-  border-radius: 5px;
-}
-.connect-form form textarea {
-  background-color: #343434;
-  width: 343px;
-  height: 148px;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 10px;
-}
-.connect-form form label {
-  margin: 10px 0;
-}
-.connect-form form button {
-  width: 140px;
-  height: 54px;
-  border-radius: 35px;
-  background-color: rgb(211, 233, 122);
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-}
-.connect-form form button:hover {
-  font-size: 20px;
-  background-color: rgb(178, 203, 80);
-}
-.about-page {
-  display: flex;
-  flex-direction: column;
-}
-.button-about {
-  display: flex;
-  margin: 10px;
-  align-items: center;
-  gap: 10px;
-}
-.button-resume {
-  border-radius: 35px;
-
-  background-color: rgb(211, 233, 122);
-  border: none;
-  color: #fff;
-  text-align: center;
-  font-size: 22px;
-  width: 220px;
-  height: 54px;
-  cursor: pointer;
-  display: inline-block;
-  transition-duration: 0.3s;
+/* 3. تخصيص خط العناوين الرئيسية */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1.2px;
 }
 
-.button-resume:hover {
-  font-size: 24px;
-  background-color: rgb(178, 203, 80);
-}
-.button-resume span {
-  color: black;
-}
-.skills {
-  display: flex;
-  justify-content: space-around;
-  gap: 40px;
-  width: 90%;
-}
-.skills-title {
-  width: 50%;
-}
-.skills .skills-btns {
-  align-items: center;
-  max-width: 50%;
-}
-.skills-title h2 {
-  margin-right: 30px;
-  font-size: 45px;
-}
-.skills-btns .btns button {
-  border: 1px solid white;
-  background-color: unset;
-  color: white;
-  border-radius: 32px;
-  padding: 10px;
-  margin: 5px;
-}
-@media (max-width: 1024px) {
-  .header {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .title {
-    width: 100%;
-    height: auto;
-    text-align: center;
-  }
-  .title h1 {
-    font-size: 64px;
-  }
-  img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-  }
+/* 4. قاعدة مهمة جداً لعمل الـ HashLink مع الـ Navbar الثابت */
+/* هذه القاعدة تضمن أن المحتوى لا يختفي تحت الـ Navbar عند الضغط على لينك */
+[id] {
+  scroll-margin-top: 100px;
 }
 
-@media (max-width: 768px) {
-  .title h1 {
-    font-size: 48px;
-  }
-  .title p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 1024px) {
-  .project {
-    flex-direction: column;
-    height: auto;
-  }
-  .description {
-    max-width: 100%;
-    margin-right: 0;
-  }
-  .image_project {
-    width: 100%;
-    max-width: 600px;
-  }
-  .image_project img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
+/* 5. (اختياري) يمكنك إضافة كلاسات مساعدة خاصة بك */
+.text-brand {
+  color: #d3e97a !important; /* لونك الأخضر المميز */
 }
 
-@media (max-width: 768px) {
-  .sec-title h1 {
-    font-size: 48px;
-  }
-  .project_links a {
-    font-size: 20px;
-  }
-}
-@media (max-width: 1024px) {
-  .about-home {
-    flex-direction: column;
-    height: auto;
-  }
-  .about-home-title,
-  .about-home-details {
-    width: 100%;
-    max-width: 90%;
-    margin: 20px 0;
-  }
-  .connect {
-    flex-direction: column;
-  }
-  .connect .connect-title,
-  .connect-form {
-    width: 100%;
-    max-width: 90%;
-    margin: 20px 0;
-  }
-  .connect-form form input,
-  .connect-form form textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-home-title h1 {
-    font-size: 48px;
-  }
-  .connect-form form button {
-    width: 100%;
-    max-width: 140px;
-  }
+a.text-brand:hover {
+  color: #b8cc69 !important; /* نسخة أغمق قليلاً عند الـ hover */
 }

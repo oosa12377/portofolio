@@ -1,20 +1,19 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./Components/layout"; // Corrected path assuming components are in src/components
 import Home from "./Components/Home";
 import About from "./Components/About";
-import "./App.css";
-import Projects from "./Components/Projects";
-import Connect from "./Components/Connect";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Connect" element={<Connect />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
